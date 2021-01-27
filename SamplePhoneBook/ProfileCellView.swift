@@ -12,12 +12,21 @@ struct ProfileCellView: View {
         HStack {
             Image(systemName: "person.circle")
                 .resizable()
-                .frame(width: 50, height: 80)
+                .frame(width: 70, height: 70)
             Text("愛知 太郎")
                 .font(.title2)
                 .fontWeight(.bold)
             Spacer()
         }
+        .padding()
+        .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+        .cornerRadius(20)
+        .shadow(color: .gray, radius: 3, x: 10, y: 10)
+        
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.black, lineWidth: 1)
+        )
     }
 }
 
