@@ -8,10 +8,22 @@
 import SwiftUI
 
 struct ProfileListView: View {
+    var phoneData = ["愛知 太郎",
+                     "愛知 花子",
+                     "沖縄 太郎",
+                     "沖縄 花子",
+                     "千葉 太郎",
+    ]
+    
     var body: some View {
         NavigationView {
             VStack {
+                ForEach(0..<phoneData.count) { num in
+                    ProfileCellView()
+                        .padding(5)
+                }
             }
+            .padding()
             //背景色の設定
             .frame(minWidth: 0,
                    maxWidth: .infinity,

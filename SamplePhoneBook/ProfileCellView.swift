@@ -34,6 +34,5 @@ struct ProfileCellView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileCellView()
             .previewLayout(.fixed(width: 300, height: 100))
-            .padding()
     }
 }
