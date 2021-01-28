@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E36BF2EC25B9664500894C57 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF2EB25B9664500894C57 /* ProfileListView.swift */; };
 		E36BF2F025B9674700894C57 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF2EF25B9674700894C57 /* CreateProfileView.swift */; };
+		E36BF30E25BAB2CB00894C57 /* ProfileCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF30D25BAB2CB00894C57 /* ProfileCellView.swift */; };
+		E36BF37525C0843300894C57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36BF37425C0843300894C57 /* Preview Assets.xcassets */; };
 		E39BA00125B0603E00299A32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BA00025B0603E00299A32 /* AppDelegate.swift */; };
 		E39BA00325B0603E00299A32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BA00225B0603E00299A32 /* SceneDelegate.swift */; };
 		E39BA00525B0603E00299A32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BA00425B0603E00299A32 /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		E36BF2EB25B9664500894C57 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		E36BF2EF25B9674700894C57 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		E36BF30D25BAB2CB00894C57 /* ProfileCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellView.swift; sourceTree = "<group>"; };
+		E36BF37425C0843300894C57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E39B9FFD25B0603E00299A32 /* SamplePhoneBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamplePhoneBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39BA00025B0603E00299A32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E39BA00225B0603E00299A32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E36BF37325C0843300894C57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E36BF37425C0843300894C57 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		E39B9FF425B0603D00299A32 = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +75,11 @@
 				E39BA00425B0603E00299A32 /* ContentView.swift */,
 				E36BF2EB25B9664500894C57 /* ProfileListView.swift */,
 				E36BF2EF25B9674700894C57 /* CreateProfileView.swift */,
+				E36BF30D25BAB2CB00894C57 /* ProfileCellView.swift */,
 				E39BA00625B0604400299A32 /* Assets.xcassets */,
 				E39BA00B25B0604400299A32 /* LaunchScreen.storyboard */,
 				E39BA00E25B0604400299A32 /* Info.plist */,
+				E36BF37325C0843300894C57 /* Preview Content */,
 			);
 			path = SamplePhoneBook;
 			sourceTree = "<group>";
@@ -128,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E39BA00D25B0604400299A32 /* LaunchScreen.storyboard in Resources */,
+				E36BF37525C0843300894C57 /* Preview Assets.xcassets in Resources */,
 				E39BA00725B0604400299A32 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36BF30E25BAB2CB00894C57 /* ProfileCellView.swift in Sources */,
 				E36BF2EC25B9664500894C57 /* ProfileListView.swift in Sources */,
 				E39BA00125B0603E00299A32 /* AppDelegate.swift in Sources */,
 				E39BA00325B0603E00299A32 /* SceneDelegate.swift in Sources */,
