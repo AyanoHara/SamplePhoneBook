@@ -27,8 +27,10 @@ struct ProfileListView: View {
                 //セルの再利用(LazyVStack)
                 LazyVStack {
                     ForEach(0..<phoneData.count) { num in
-                        ProfileCellView(name: phoneData[num])
-                            .padding(5)
+                        NavigationLink(destination: EditProfileView()) {
+                            ProfileCellView(name: phoneData[num])
+                        }
+                        .padding(5)
                     }
                 }
             }
