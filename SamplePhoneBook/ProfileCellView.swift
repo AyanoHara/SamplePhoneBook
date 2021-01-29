@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ProfileCellView: View {
+    
+    var name: String
+    
     var body: some View {
         HStack {
             Image(systemName: "person.circle")
                 .resizable()
                 .frame(width: 70, height: 70)
-            Text("愛知 太郎")
+            Text(name)
                 .font(.title2)
                 .fontWeight(.bold)
             Spacer()
@@ -32,7 +35,7 @@ struct ProfileCellView: View {
 
 struct ProfileCellView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileCellView()
+        ProfileCellView(name: "愛知 次郎")
             .previewLayout(.fixed(width: 300, height: 100))
     }
 }
