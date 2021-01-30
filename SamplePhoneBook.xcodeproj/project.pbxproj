@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E34E705E25C456490063D833 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34E705D25C456490063D833 /* EditProfileView.swift */; };
 		E36BF2EC25B9664500894C57 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF2EB25B9664500894C57 /* ProfileListView.swift */; };
 		E36BF2F025B9674700894C57 /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF2EF25B9674700894C57 /* CreateProfileView.swift */; };
 		E36BF30E25BAB2CB00894C57 /* ProfileCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36BF30D25BAB2CB00894C57 /* ProfileCellView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E34E705D25C456490063D833 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		E36BF2EB25B9664500894C57 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 		E36BF2EF25B9674700894C57 /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 		E36BF30D25BAB2CB00894C57 /* ProfileCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				E36BF2EB25B9664500894C57 /* ProfileListView.swift */,
 				E36BF2EF25B9674700894C57 /* CreateProfileView.swift */,
 				E36BF30D25BAB2CB00894C57 /* ProfileCellView.swift */,
+				E34E705D25C456490063D833 /* EditProfileView.swift */,
 				E39BA00625B0604400299A32 /* Assets.xcassets */,
 				E39BA00B25B0604400299A32 /* LaunchScreen.storyboard */,
 				E39BA00E25B0604400299A32 /* Info.plist */,
@@ -160,6 +163,7 @@
 				E39BA00325B0603E00299A32 /* SceneDelegate.swift in Sources */,
 				E36BF2F025B9674700894C57 /* CreateProfileView.swift in Sources */,
 				E39BA00525B0603E00299A32 /* ContentView.swift in Sources */,
+				E34E705E25C456490063D833 /* EditProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
