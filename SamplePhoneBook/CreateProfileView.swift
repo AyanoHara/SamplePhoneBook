@@ -38,7 +38,7 @@ struct CreateProfileView: View {
                     )
                     .padding(5)
                 HStack {
-                    TextField("郵便番号を入力", text: $phoneNumString)
+                    TextField("郵便番号を入力", text: $postalCode)
                         .font(.title)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .overlay(
@@ -59,7 +59,7 @@ struct CreateProfileView: View {
                     }
                 }
                 .padding(5)
-                TextField("住所を入力", text: $phoneNumString)
+                TextField("住所を入力", text: $address)
                     .font(.title)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .overlay(
@@ -67,7 +67,9 @@ struct CreateProfileView: View {
                             .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
                     )
                     .padding(5)
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {
+                    print("ボタンが押されました！！")
+                }) {
                     Text("登録する")
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity, minHeight: 60)
@@ -79,6 +81,7 @@ struct CreateProfileView: View {
                                 .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
                         )
                 }
+                .disabled(name.isEmpty || phoneNumString.isEmpty || address.isEmpty)
                 .padding(5)
                 Spacer()
             }
