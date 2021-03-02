@@ -70,29 +70,16 @@ struct CreateProfileView: View {
                 Button(action: {
                     print("ボタンが押されました！！")
                 }) {
-                    if name.isEmpty || phoneNumString.isEmpty || address.isEmpty {
-                        Text("登録する")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, minHeight: 60)
-                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                            .background(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
-                            )
-                    } else {
-                        Text("登録する")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, minHeight: 60)
-                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                            .background(Color(#colorLiteral(red: 0.01002341509, green: 0.9769298434, blue: 0.4756181836, alpha: 1)))
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
-                            )
-                    }
+                    Text("登録する")
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, minHeight: 60)
+                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                        .background(Color((name.isEmpty || phoneNumString.isEmpty || address.isEmpty) ? #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : #colorLiteral(red: 0.01002341509, green: 0.9769298434, blue: 0.4756181836, alpha: 1)))
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
+                        )
                 }
                 .disabled(name.isEmpty || phoneNumString.isEmpty || address.isEmpty)
                 .padding(5)
