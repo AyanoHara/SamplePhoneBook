@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CreateProfileView: View {
     
+    @ObservedObject var profileEditVM = ProfileEditViewModel()
+    
     @State private var name = ""
     @State private var phoneNumString = ""
     @State private var postalCode = ""
@@ -45,7 +47,12 @@ struct CreateProfileView: View {
                             RoundedRectangle(cornerRadius: 5)
                                 .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
                         )
-                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {
+                        profileEditVM.fetchAddressData(zipCode: postalCode) {
+                            self.address = profileEditVM.addressString
+                        }
+                    }
+                    ) {
                         Text("検索")
                             .fontWeight(.bold)
                             .padding()
