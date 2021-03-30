@@ -47,12 +47,21 @@ struct CreateProfileView: View {
                             RoundedRectangle(cornerRadius: 5)
                                 .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
                         )
+//                    Button(action: {
+//                        profileEditVM.fetchAddressData(zipCode: postalCode) {
+//                            self.address = profileEditVM.addressString
+//                        }
+//                    }
+//                    ) {
+                    
                     Button(action: {
-                        profileEditVM.fetchAddressData(zipCode: postalCode) {
-                            self.address = profileEditVM.addressString
-                        }
+                      profileEditVM.fetchAddressData(zipCode: postalCode) {
+                      // アラートフラグとアクションシートフラグがfalseの時のみ代入する
+                      if !self.profileEditVM.viewHelper.showAlert && !self.profileEditVM.viewHelper.showSheet {
+                         self.address = profileEditVM.viewHelper.string
+                      }
                     }
-                    ) {
+                    }) {
                         Text("検索")
                             .fontWeight(.bold)
                             .padding()
@@ -63,6 +72,8 @@ struct CreateProfileView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), lineWidth: 1)
                             )
+                    }.alert(isPresented: self.$profileEditVM.viewHelper.showAlert) {
+                        Alert(title: Text("エラー"), message: Text(self.profileEditVM.viewHelper.string), dismissButton: .cancel())
                     }
                 }
                 .padding(5)

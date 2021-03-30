@@ -9,9 +9,7 @@ import Foundation
 
 class ProfileEditViewModel: ObservableObject {
     
-    @Published var addressArrayString: [String?] = []
-    @Published var addressString: String = ""  // 初期化する。初期値から変更があった時、非同期で伝播させるため
-    @Published var showAlert: Bool = false     // Booleanの場合はfalseを初期値にする。変更があるならtrueでも良い
+    @Published var viewHelper: ViewHelper = ViewHelper()
     
     func fetchAddressData(zipCode: String, updateUi: @escaping() -> Void) {
         let baseUrl = "https://zipcloud.ibsnet.co.jp/api/search"
@@ -24,11 +22,7 @@ class ProfileEditViewModel: ObservableObject {
                 let decodedData = try JSONDecoder().decode(AddressData.self, from: jsonData)
                 DispatchQueue.main.async {
                     guard let results = DecodeType.init(rawValue: decodedData.status) else { return }
-                    self.addressArrayString = results.checkStatus(resultData: decodedData)
-                    if self.addressArrayString.count == 1 {
-                        self.addressString = self.addressArrayString[0] ?? ""
-                        print(self.addressString)
-                    }
+                    self.viewHelper = results.checkStatus(resultData: decodedData)
                     updateUi()
                 }
                 
